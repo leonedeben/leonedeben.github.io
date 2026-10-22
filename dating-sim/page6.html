@@ -3,17 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>?</title>
+
+     <style>
+    .center-image {
+        display: block;
+        width: 500px;
+        height: auto;
+        margin: 50px auto 20px auto;
+    }
+</style> 
 </head>
 
 <body>
+
+<!-- First image: visible immediately -->
+<img
+    id="firstImage"
+    src="meh.png"
+    class="center-image"
+    alt="Character"
+>
+
+<!-- Second image: hidden at first -->
+<img
+    id="secondImage"
+    src="angry.png"
+    class="center-image"
+    alt="Character"
+    style="display: none;"
+>
 
    <h1 id="text" style="
     position: absolute;
     bottom: 60px;
     width: 100%;
     text-align: left;
-">...</h1>
+    color: deeppink;
+">"..."</h1>
 
 <div style="
     position: absolute;
@@ -52,13 +79,25 @@
 </div>
 
 <script>
-    setTimeout(() => {
-        document.getElementById("text").textContent =
-            "well, do you need me explain EVERYTHING??"
-            ;
+   setTimeout(() => {
 
-        document.getElementById("buttons").style.display = "block";
-    }, 3000);
+    // Hide the first image
+    document.getElementById("firstImage").style.display = "none";
+
+    // Show the second image
+    document.getElementById("secondImage").style.display = "block";
+
+    // Change the text
+    document.getElementById("text").textContent =
+        '"well, do you need me explain EVERYTHING??"';
+
+    document.getElementById("text").style.color = "deeppink";
+
+    // Show the buttons
+    document.getElementById("buttons").style.display = "block";
+
+}, 3000);
+
 </script>
 
 

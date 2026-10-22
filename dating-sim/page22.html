@@ -1,3 +1,133 @@
-PERFECT ENDING
-you decide to be a supportive
-bf and pull up to the spot...
+<!-- OK choice 1 badpe 2 leading shoe + accessory-->  
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>top!</title>
+    
+    <style> 
+        body {
+            background-image: url("/dfvdf.jpg");
+            background-repeat: no-repeat;
+             background-position: center;
+             background-size: cover;
+             background-attachment: fixed;
+             margin: 0;
+            min-height: 100vh;
+        }
+    </style>
+    <style>
+    .image-row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 120px;
+
+        position: absolute;
+        left: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .image-row a {
+        display: block;
+        flex: 1;
+        max-width: 200px;
+    }
+
+    .image-row img {
+        width: 150%;
+        height: auto;
+        display: block;
+    transition: transform 0.2s ease;
+    }
+
+    .image-row a:hover img {
+        animation: bob 0.4s ease-in-out infinite alternate;
+    }
+ @keyframes bob {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-10px);
+        }
+   }
+  .oktopbadbottom-image {
+    position: fixed;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 700x;
+    height: auto;
+    z-index: 10;
+}
+</style>
+</head>
+
+<body>
+
+   <div class="image-row">
+    <a href=" ">
+        <img src="badaccessoryno.png"
+             class="hover-image"
+             data-hover="badaccessoryyes.png"
+             alt="Image 1">
+    </a>
+
+    <a href=" ">
+        <img src="accessoryperfectno.png"
+             class="hover-image"
+             data-hover="accessoryperfectyes.png"
+             alt="Image 2">
+    </a>
+
+    <a href=" ">
+        <img src="accessorygoodno.png"
+             class="hover-image"
+             data-hover="accessorygoodyes.png"
+             alt="Image 3">
+    </a>
+
+
+</div>
+
+<img src="oktopbadbottom.png"
+     class="oktopbadbottom-image "
+     alt="Pajamas">
+
+
+     <div style="
+    position: absolute;
+    bottom: 30px;
+    left: 80px;
+    width: 850px;
+    background-color: white;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    border-radius: 5px;
+">
+    <h1 style="
+        color: deeppink;
+        margin: 0;
+    ">
+       ♥︎  "oh!"
+    </h1>
+</div>
+    <script>
+    document.querySelectorAll(".hover-image").forEach(img => {
+        const originalImage = img.src;
+        const hoverImage = img.dataset.hover;
+
+        img.addEventListener("mouseenter", () => {
+            img.src = hoverImage;
+        });
+
+        img.addEventListener("mouseleave", () => {
+            img.src = originalImage;
+        });
+    });
+</script>
+</body>
+</html>
